@@ -94,3 +94,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+svg {
+  fill: currentColor;
+  width: 100%;
+  height: auto;
+}
