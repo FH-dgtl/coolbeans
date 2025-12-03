@@ -1,0 +1,42 @@
+:root {
+  --ff-serif: Courier, serif;
+  --ff-sans-serif: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --fs-responsive-xl: clamp(2rem, 1.6rem + 1.6vw, 3rem);
+  --fs-responsive-l: clamp(1.75rem, 1.45rem + 1.2vw, 2.5rem);
+  --fs-responsive-m: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
+  --fs-responsive-s: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
+  --letter-spacing: 1px;
+
+  font-family: var(--ff-sans-serif);
+}
+
+h2,
+.heading-xl {
+  font-size: var(--fs-responsive-xl);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+}
+
+h3,
+.heading-l {
+  font-size: var(--fs-responsive-l);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+}
+
+h4,
+.heading-m {
+  font-size: var(--fs-responsive-m);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+}
+
+p,
+.copv-s {
+  font-weight: 400;
+  font-size: var(--fs-responsive-s);
+  letter-spacing: var(--letter-spacing);
+}
