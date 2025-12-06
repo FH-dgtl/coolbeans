@@ -10,6 +10,7 @@
   font-family: var(--ff-sans-serif);
 }
 
+h1,
 h2,
 .heading-xl {
   font-size: var(--fs-responsive-xl);
@@ -29,6 +30,14 @@ h3,
 h4,
 .heading-m {
   font-size: var(--fs-responsive-m);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+}
+
+h5,
+.heading-s {
+  font-size: var(--fs-responsive-s);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
