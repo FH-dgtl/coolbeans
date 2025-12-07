@@ -141,7 +141,7 @@ header {
     align-items: center;
     gap: 0.5rem;
     margin: var(--spacing-s);
-    transition: transform 0.3s ease-in-out;
+    transition: var(--transition-default);
     transform-origin: top;
 
     a {
