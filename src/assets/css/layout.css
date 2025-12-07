@@ -169,7 +169,7 @@ a {
   --section-surface-light: oklch(from var(--section-surface) calc(l + 0.2) c h);
   --section-contrast: var(--color-brand);
   color: inherit;
-  padding-block: calc(3 * var(--spacing-default));
+  padding-block: calc(4 * var(--spacing-default));
   background-color: var(--section-surface);
 }
 
@@ -178,6 +178,8 @@ a {
 }
 
 .section--hero {
+  --transition-duration: 20s;
+  padding-block-start: var(--spacing-default);
   display: grid;
   grid-template: "container";
   height: 100vh;
@@ -195,7 +197,6 @@ a {
   .logo {
     max-width: 40rem;
     filter: var(--dropshadow);
-    fill: var(--color-brand);
     align-self: center;
   }
 
@@ -204,10 +205,80 @@ a {
     justify-self: center;
     z-index: 2;
   }
+  .img-wrap--cover img:nth-child(1) {
+    animation: fade-1 var(--transition-duration) infinite;
+  }
+
+  img:nth-child(2) {
+    animation: fade-2 var(--transition-duration) infinite;
+  }
+  img:nth-child(3) {
+    animation: fade-3 var(--transition-duration) infinite;
+  }
+  img:nth-child(4) {
+    animation: fade-3 var(--transition-duration) infinite;
+  }
 }
 
+@keyframes fade-1 {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-2 {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-3 {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-4 {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .section--vata {
   --section-surface: var(--color-whale);
+  padding-block-start: var(--spacing-default);
   background-image: linear-gradient(
     var(--color-doom),
     var(--color-aubergine),
