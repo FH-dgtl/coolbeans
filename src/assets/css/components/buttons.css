@@ -1,0 +1,36 @@
+.buttons {
+  margin-block-start: var(--spacing-s);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-s);
+  & > * {
+    flex-shrink: 0;
+  }
+}
+
+.button {
+  --button-text: var(--color-surface, Canvas);
+  --button-surface: var(--color-text, CanvasText);
+  --button-surface-hover: var(--color-darkest);
+  --button-text-hover: var(--color-brand);
+  --button-radius: var(--border-radius, none);
+  --button-fs: var(--fs-responsive-s);
+  width: max-content;
+  font-size: var(--button-fs);
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  background-color: var(--button-surface);
+  color: var(--button-text);
+  padding-inline: var(--spacing-default);
+  padding-block: var(--spacing-s);
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease-out;
+
+  &:hover,
+  &:focus-visible {
+    --button-text: var(--button-text-hover);
+    --button-surface: var(--button-surface-hover);
+    transform: rotate(-3deg);
+  }
+}

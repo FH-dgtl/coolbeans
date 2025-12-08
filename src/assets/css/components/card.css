@@ -1,0 +1,45 @@
+.card {
+  --card-surface: var(--section-surface-dark);
+  --card-spacing-inner: var(--spacing-s);
+  --card-ratio: 1;
+  --card-border-radius: var(--border-radius-s);
+  margin-block-start: var(--spacing-default);
+  margin-inline: unset;
+  aspect-ratio: var(--card-ratio);
+  display: grid;
+  grid-template: "container";
+  border-radius: var(--border-radius-s);
+  overflow: clip;
+  container-type: inline-size;
+
+  & > * {
+    grid-area: container;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  figcaption {
+    padding-block: var(--card-spacing-inner);
+    padding-inline: var(--card-border-radius);
+    background-color: var(--card-surface);
+    text-align: center;
+    text-wrap: balance;
+    height: fit-content;
+    z-index: 2;
+    align-self: flex-end;
+
+    & > * {
+      margin-block: unset;
+    }
+
+    @container (width < 360px) {
+      & > * {
+        font-size: 1rem;
+      }
+    }
+  }
+}

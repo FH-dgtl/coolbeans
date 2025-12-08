@@ -1,0 +1,33 @@
+.hero {
+  --transition-duration: 15s;
+  padding-block-start: var(--spacing-default);
+  display: grid;
+  grid-template: "container";
+  height: 100vh;
+  overflow: clip;
+  padding: 0;
+
+  & > * {
+    grid-area: container;
+  }
+
+  .logo,
+  .cta {
+    margin: var(--spacing-default);
+  }
+
+  .logo {
+    max-width: 40rem;
+    filter: var(--dropshadow);
+    align-self: center;
+  }
+
+  .cta {
+    align-self: flex-end;
+    justify-self: center;
+    z-index: 2;
+  }
+  .img-wrap--cover img:nth-child(1) {
+    animation: fade-1 var(--transition-duration) infinite;
+  }
+}
