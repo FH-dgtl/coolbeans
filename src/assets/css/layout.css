@@ -1,18 +1,15 @@
 :root {
-  --color-brand: #f9b500;
-  --color-brand-1: #50ee25;
-  --color-brand-2: #009ee0;
-  --color-brand-3: #950f7e;
-  --color-brand-4: #ff1493;
+  --color-brand: oklch(0.8355 0.1869 81.27);
+  --color-brand-1: oklch(83.335% 0.25927 140.452);
+  --color-mandarine: oklch(0.6579 0.2313 38.67);
+  --color-peach: oklch(0.6549 0.2613 356.94);
+  --color-plum: oklch(0.4611 0.2207 337.21);
   --color-aubergine: oklch(0.3721 0.1948 316.08);
   --color-mangostan: oklch(0.3192 0.1223 10.08);
-  --color-mandarine: oklch(0.6579 0.2313 38.67);
-  --color-peach: oklch(0.8574 0.0681 15.38);
-  --color-peca: oklch(0.4221 0.1519 15.38);
+  --color-doom: oklch(0.4572 0.1766 17.49);
+  --color-sky: oklch(0.6627 0.1829 237.16);
   --color-whale: oklch(0.3977 0.0922 213.38);
   --color-avocado: oklch(0.3654 0.0311 155.14);
-  --color-doom: oklch(0.4572 0.1766 17.49);
-
   --color-darkest: #000;
   --color-lightest: #fff;
   --color-brand-80: oklch(from var(--color-brand) 0.8 c h);
@@ -21,7 +18,6 @@
   --color-link: var(--color-brand-80);
   --color-text: var(--color-lightest);
   --color-surface: var(--color-darkest);
-  --color-surface-opaque-80: oklch(from var(--color-surface) l c h / 0.8);
   --dropshadow: drop-shadow(
     10px 10px 15px oklch(from var(--color-surface) l c h / 0.9)
   );
@@ -33,7 +29,6 @@
   --border-radius-s: 2rem;
   --transition-default: transform 0.2s ease-out;
   --page-max-width: 1680px;
-
   color-scheme: dark;
 }
 
@@ -61,6 +56,11 @@ a {
   &:focus-visible,
   &:hover {
     color: var(--color-hover);
+  }
+
+  &:focus-visible {
+    border: unset;
+    outline: none;
   }
 }
 
@@ -98,7 +98,10 @@ a {
 }
 
 .navigation-wrap {
+  --navigation-color-border: oklch(from var(--color-text) l c h / 0.4);
   --navigation-radius: 3rem;
+  --navigation-border: 0.25rem solid var(--navigation-color-border);
+
   position: fixed;
   top: 0;
   max-width: var(--page-max-width);
@@ -106,29 +109,37 @@ a {
   z-index: 300;
   border-radius: var(--navigation-radius);
   overflow: clip;
-  backdrop-filter: blur(20px);
-  background-color: oklch(from var(--color-text) l c h / 0.2);
+  backdrop-filter: blur(10px) saturate(200%);
+  background-color: oklch(from var(--color-text) l c h / 0.3);
+  border: var(--navigation-border);
   margin: var(--spacing-default);
+
+  &:has(:focus-visible),
+  &:has(button:hover) {
+    --navigation-color-border: var(--color-text);
+  }
 
   button {
     width: clamp(4rem, 1.57rem + 5.063vw, 6rem);
     aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
 
     img {
       object-fit: contain;
       transition: var(--transition-default);
+      transform: rotate(20deg);
     }
 
-    &:hover,
     &:focus-visible {
-      img {
-        transform: scale(1.2);
-      }
+      background-color: oklch(from var(--color-text) l c h / 0.2);
     }
   }
 
   &:has(.navigation--hidden) {
-    --navigation-radius: 50%;
+    img {
+      transform: rotate(0deg);
+    }
   }
 
   .navigation {
@@ -148,6 +159,7 @@ a {
       text-transform: uppercase;
       letter-spacing: var(--letter-spacing);
       width: min-content;
+
       &:focus-visible,
       &:hover {
         color: var(--color-brand);
@@ -156,6 +168,7 @@ a {
   }
 
   .navigation--hidden {
+    visibility: hidden;
     margin: 0;
     height: 0;
     width: 0;
@@ -295,7 +308,7 @@ a {
   background-image: linear-gradient(
     var(--color-mandarine),
     var(--section-surface) 8%,
-    var(--color-brand-4),
+    var(--color-peach),
     var(--section-surface)
   );
 }
@@ -303,9 +316,9 @@ a {
 .section--retreat {
   --section-surface: var(--color-mandarine);
   background-image: linear-gradient(
-    var(--color-brand-2),
+    var(--color-sky),
     var(--color-aubergine),
-    var(--color-brand-3),
+    var(--color-plum),
     var(--section-surface)
   );
 }
