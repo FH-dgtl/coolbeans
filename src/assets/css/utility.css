@@ -35,3 +35,7 @@
 .img-border-1 {
   border-radius: 10rem 0 10rem 0;
 }
+
+.spacer {
+  margin-block-start: var(--spacing-default);
+}
