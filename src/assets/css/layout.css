@@ -94,6 +94,7 @@ main {
 
 .section--pitta {
   --section-surface: var(--color-doom);
+  padding-block-start: 0;
 }
 
 .section--kapha {

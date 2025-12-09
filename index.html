@@ -100,24 +100,14 @@
           </div>
         </div>
       </section>
-      <!-- Image divider -->
-      <div class="img-wrap--cover ratio-3-1">
-        <img
-          loading="lazy"
-          srcset="
-            https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_256/v1764790492/pizza.webp   256w,
-            https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_512/v1764790492/pizza.webp   512w,
-            https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_768/v1764790492/pizza.webp   768w,
-            https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_1024/v1764790492/pizza.webp 1024w,
-            https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_1280/v1764790492/pizza.webp 1280w,
-            https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_1440/v1764790492/pizza.webp
-          "
-          src="https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_512/v1764790492/pizza.webp"
-          alt="Pizza closeup"
-        />
-      </div>
       <!-- Offers Section -->
       <section id="offers" class="section section--pitta">
+        <!-- Gallery Moodfood -->
+        <section
+          class="scroller"
+          data-scroller
+          data-url="https://res.cloudinary.com/coolbeans-moodfood/image/list/moodfood.json"
+        ></section>
         <ol class="list-alternate">
           <li>
             <article>
@@ -155,6 +145,22 @@
           </li>
           <li>
             <article>
+              <h3 class="section-title">FIRMENESSEN - FOOD THAT WORKS</h3>
+              <p>
+                Essen, das nährt, nicht lähmt. Wir bringen frisches,
+                ausgewogenes Mittagessen in Büros, Werkstätten und Ateliers -
+                für konzentriertes Arbeiten und gute Laune im Team. Denn wer gut
+                isst, arbeitet besser! Lieferradius: Düsseldorf &amp; Umgebung.
+              </p>
+            </article>
+            <img
+              loading="lazy"
+              src="https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_240/v1764859644/icon-brocoli.svg"
+              alt="Broccoli"
+            />
+          </li>
+          <li>
+            <article>
               <h3 class="section-title">AYURVEDISCHE KÜCHE &amp; YOGI FOOD</h3>
               <p>
                 Balance auf dem Teller, Frieden im Bauch. Essen nach
@@ -171,22 +177,15 @@
               alt="Ingwer"
             />
           </li>
-          <li>
-            <article>
-              <h3 class="section-title">FIRMENESSEN - FOOD THAT WORKS</h3>
-              <p>
-                Essen, das nährt, nicht lähmt. Wir bringen frisches,
-                ausgewogenes Mittagessen in Büros, Werkstätten und Ateliers -
-                für konzentriertes Arbeiten und gute Laune im Team. Denn wer gut
-                isst, arbeitet besser! Lieferradius: Düsseldorf &amp; Umgebung.
-              </p>
-            </article>
-            <img
-              loading="lazy"
-              src="https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_240/v1764859644/icon-brocoli.svg"
-              alt="Broccoli"
-            />
-          </li>
+        </ol>
+        <!-- Gallery Healthy -->
+        <section
+          class="scroller"
+          data-scroller
+          data-url="https://res.cloudinary.com/coolbeans-moodfood/image/list/healthy.json"
+          data-direction="right"
+        ></section>
+        <ol class="list-alternate">
           <li>
             <article>
               <h3 class="section-title">ESSEN FÜR MÜTTER IM WOCHENBETT</h3>
@@ -239,6 +238,12 @@
             />
           </li>
         </ol>
+        <!-- Gallery Coolbeans -->
+        <section
+          class="scroller"
+          data-scroller
+          data-url="https://res.cloudinary.com/coolbeans-moodfood/image/list/coolbeans.json"
+        ></section>
       </section>
       <!-- Image divider -->
       <div class="img-wrap--cover ratio-3-1">
@@ -258,6 +263,13 @@
       </div>
       <!-- About Section -->
       <section id="about" class="section section--kapha">
+        <!-- Gallery Coolbeans -->
+        <section
+          class="scroller"
+          data-scroller
+          data-url="https://res.cloudinary.com/coolbeans-moodfood/image/list/team.json"
+          data-direction="right"
+        ></section>
         <div class="grid-wrap">
           <h2 class="section-title">Mit Herz und Haltung.</h2>
           <p>
@@ -441,31 +453,10 @@
                   <use href="/icons.svg#instagram" />
                 </svg>
               </a>
-              <a
-                href="https://mastodon.social/@coolbeansmoodfood"
-                class="button-icon"
-                title="mastodon"
-              >
-                <svg aria-hidden="true"><use href="/icons.svg#mastodon" /></svg>
-              </a>
             </nav>
           </article>
         </div>
       </section>
-      <!-- Back to top 
-      <div class="back-to-top">
-        <button
-          class="button-round"
-          data-back-to-top
-          title="Zurück zum seitenanfang"
-        >
-          <img
-            src="https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_240/v1764859644/icon-garlic.webp"
-            alt="bean icon"
-            aria-hidden="true"
-          />
-        </button>
-      </div> -->
     </main>
 
     <!-- Footer -->

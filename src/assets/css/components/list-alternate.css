@@ -5,6 +5,7 @@
   display: grid;
   gap: var(--spacing-default);
   container-type: inline-size;
+  margin-block: var(--spacing-default);
 
   li {
     background-color: var(--section-surface-dark);

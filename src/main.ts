@@ -1,4 +1,5 @@
 import './assets/css/index.css'
+import { renderGalleryImages } from './assets/ts/renderGalleryImages'
 
 const navigationToggle: HTMLElement | null = document.querySelector("[data-navigation-toggle]");
 const navigation: HTMLElement | null = document.querySelector("[data-navigation]");
@@ -47,4 +48,10 @@ function handleOutsideClick(event: MouseEvent): void {
 const backToTopButton: HTMLElement | null = document.querySelector("[data-back-to-top]");
 backToTopButton?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+const allScroller: NodeListOf<HTMLElement> | null = document.querySelectorAll("[data-scroller]");
+allScroller.forEach(element => {
+    if(!element.dataset.url) return
+    renderGalleryImages(element, element.dataset.url, 500);
 });
