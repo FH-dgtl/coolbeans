@@ -43,3 +43,8 @@ function handleOutsideClick(event: MouseEvent): void {
         closeNavigation();
     }
 }
+
+const backToTopButton: HTMLElement | null = document.querySelector("[data-back-to-top]");
+backToTopButton?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});

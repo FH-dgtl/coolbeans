@@ -64,6 +64,10 @@ a {
   }
 }
 
+main {
+  position: relative;
+}
+
 .section {
   --section-surface: transparent;
   --section-surface-dark: oklch(from var(--section-surface) calc(l - 0.1) c h);
@@ -132,4 +136,13 @@ footer {
     gap: var(--spacing-s);
     flex-wrap: wrap;
   }
+}
+
+.back-to-top {
+  position: sticky;
+  bottom: var(--spacing-default);
+  margin: var(--spacing-default);
+  z-index: 200;
+  display: inline-flex;
+  right: 0;
 }
