@@ -94,7 +94,7 @@ main {
 
 .section--pitta {
   --section-surface: var(--color-doom);
-  padding-block-start: 0;
+  padding-block: 0;
 }
 
 .section--kapha {
@@ -109,6 +109,7 @@ main {
 
 .section--retreat {
   --section-surface: var(--color-mandarine);
+
   background-image: linear-gradient(
     var(--color-sky),
     var(--color-aubergine),
