@@ -26,8 +26,6 @@
     align-self: flex-end;
     justify-self: center;
     z-index: 2;
-  }
-  .img-wrap--cover img:nth-child(1) {
-    animation: fade-1 var(--transition-duration) infinite;
+    box-sizing: padding-box;
   }
 }

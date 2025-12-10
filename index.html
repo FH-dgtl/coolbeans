@@ -36,7 +36,7 @@
       </nav>
     </div>
     <!-- Hero -->
-    <section id="hero" class="section hero">
+    <div id="hero" class="hero">
       <div class="img-wrap--cover">
         <img
           srcset="
@@ -63,9 +63,9 @@
         </svg>
       </span>
       <div class="cta">
-        <a href="#coolbeans" class="button">Ayurvedisch, Vegetarisch, Vegan</a>
+        <a href="#coolbeans" class="button">Vegetarisch, Vegan, Ayurvedisch</a>
       </div>
-    </section>
+    </div>
     <main>
       <!-- About Section -->
       <section id="coolbeans" class="section section--vata">
@@ -80,7 +80,7 @@
                 Catering & MoodFood Düsseldorf & Umgebung
               </h1>
               <nav class="buttons">
-                <a href="#offers" class="button"> Angebote </a>
+                <a href="#offers" class="button rainbow-border"> Angebote </a>
                 <a href="mailto:info@coolbeans-moodfood.de" class="button">
                   Schreib uns!
                 </a>
@@ -117,7 +117,7 @@
                 mild bis würzig - unsere Suppen sind Seelenschmeichler für jede
                 Jahreszeit. Mit Liebe gekocht, mit Aromen aus aller Welt
                 verfeinert. Geeignet für: Mittagstisch, Teammeeting,
-                Familienessen. Oder wenn Dir einfach ein bisschen kalt ist.
+                Familienessen.
               </p>
             </article>
             <img
@@ -178,6 +178,12 @@
             />
           </li>
         </ol>
+        <div class="buttons buttons--centered">
+          <a href="mailto:info@coolbeans-moodfood.de" class="button">
+            Jetzt bestellen!
+          </a>
+        </div>
+        <div class="spacer"></div>
         <!-- Gallery Healthy -->
         <section
           class="scroller"
@@ -238,6 +244,12 @@
             />
           </li>
         </ol>
+        <div class="buttons buttons--centered">
+          <a href="mailto:info@coolbeans-moodfood.de" class="button">
+            Jetzt bestellen!
+          </a>
+        </div>
+        <div class="spacer"></div>
         <!-- Gallery Coolbeans -->
         <section
           class="scroller"
@@ -385,10 +397,15 @@
           data-url="https://res.cloudinary.com/coolbeans-moodfood/image/list/team.json"
           data-direction="right"
         ></div>
+        <div class="buttons buttons--centered">
+          <a href="mailto:info@coolbeans-moodfood.de" class="button">
+            Termin anfragen!
+          </a>
+        </div>
       </section>
 
       <!-- Image divider 3 -->
-      <div class="img-wrap--cover ratio-3-1">
+      <div class="img-wrap--cover ratio-16-9">
         <img
           loading="lazy"
           srcset="
@@ -400,7 +417,7 @@
             https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_1440/v1764790492/aubergine.webp
           "
           src="https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_512/v1764790492/aubergine.webp"
-          alt="Tomate und Heuschrecke"
+          alt="Auberginen"
         />
       </div>
       <!-- Contact Section -->
@@ -440,14 +457,14 @@
             <nav class="buttons">
               <a
                 href="mailto:info@coolbeans-moodfood.de"
-                class="button-icon"
+                class="button button--icon-only"
                 title="Schreib uns!"
               >
                 <svg aria-hidden="true"><use href="/icons.svg#mail" /></svg>
               </a>
               <a
                 href="https://www.instagram.com/coolbeansmoodfood/"
-                class="button-icon"
+                class="button button--icon-only"
                 title="instagram"
               >
                 <svg aria-hidden="true">
@@ -458,8 +475,6 @@
           </article>
         </div>
       </section>
-    </main>
-
     <!-- Footer -->
     <footer id="footer">
       <nav>
@@ -468,6 +483,20 @@
         <span>&copy; coolbeans - moodfood 2026</span>
       </nav>
     </footer>
+      <div class="back-to-top">
+        <button
+          class="button-round"
+          data-back-to-top
+          title="Zurück zum seitenanfang"
+        >
+          <img
+            src="https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_240/v1764859644/icon-garlic.webp"
+            alt="bean icon"
+            aria-hidden="true"
+          />
+        </button>
+    </main>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

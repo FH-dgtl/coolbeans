@@ -32,6 +32,10 @@
   aspect-ratio: 3 / 1;
 }
 
+.ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
 .img-border-1 {
   border-radius: 10rem 0 10rem 0;
 }

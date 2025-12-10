@@ -22,6 +22,7 @@
     10px 10px 15px oklch(from var(--color-surface) l c h / 0.9)
   );
   --spacing-default: clamp(1rem, 0.2rem + 3.2vw, 3rem);
+  --spacing-xs: 0.5rem;
   --spacing-s: 1rem;
   --spacing-m: 1.5rem;
   --spacing-l: 2rem;
@@ -70,12 +71,13 @@ main {
 
 .section {
   --section-surface: transparent;
-  --section-surface-dark: oklch(from var(--section-surface) calc(l - 0.1) c h);
-  --section-surface-light: oklch(from var(--section-surface) calc(l + 0.2) c h);
+  --section-surface-dark: oklch(from var(--section-surface) calc(l * 0.9) c h);
+  --section-surface-light: oklch(from var(--section-surface) calc(l * 1.2) c h);
   --section-contrast: var(--color-brand);
   color: inherit;
   padding-block: calc(4 * var(--spacing-default));
   background-color: var(--section-surface);
+  justify-content: center;
 }
 
 .section-title {
@@ -83,11 +85,11 @@ main {
 }
 
 .section--vata {
-  --section-surface: var(--color-whale);
+  --section-surface: var(--color-aubergine);
   padding-block-start: var(--spacing-default);
   background-image: linear-gradient(
     var(--color-doom),
-    var(--color-aubergine),
+    var(--section-surface),
     var(--color-whale)
   );
 }
@@ -119,10 +121,10 @@ main {
 }
 
 .section--yoga {
-  --section-surface: var(--color-mangostan);
+  --section-surface: var(--color-aubergine);
   background-image: linear-gradient(
-    var(--color-aubergine),
-    var(--section-surface)
+    var(--section-surface),
+    var(--color-mangostan)
   );
 }
 
@@ -138,13 +140,4 @@ footer {
     gap: var(--spacing-s);
     flex-wrap: wrap;
   }
-}
-
-.back-to-top {
-  position: sticky;
-  bottom: var(--spacing-default);
-  margin: var(--spacing-default);
-  z-index: 200;
-  display: inline-flex;
-  right: 0;
 }

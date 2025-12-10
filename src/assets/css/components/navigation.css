@@ -14,7 +14,7 @@
   backdrop-filter: blur(10px) saturate(200%);
   background-color: oklch(from var(--color-surface) l c h / 0.3);
   border: var(--navigation-border);
-  margin: var(--spacing-default);
+  margin: var(--spacing-xs);
 
   &:has(:focus-visible),
   &:has(button:hover) {
@@ -77,5 +77,47 @@
     height: 0;
     width: 0;
     transform: scale(0);
+  }
+}
+
+.back-to-top {
+  position: sticky;
+  bottom: var(--spacing-xs);
+  z-index: 200;
+  margin-block-start: var(--spacing-default);
+  margin-inline-end: var(--spacing-xs);
+  width: max-content;
+  margin-inline-start: auto;
+}
+
+.button-round {
+  --button-radius: 3rem;
+  --button-border: 0.25rem solid var(--button-border-color);
+  --button-border-color: oklch(from var(--color-text) l c h / 0.4);
+  --button-color-surface-light: oklch(from var(--color-text) l c h / 0.3);
+  --button-color-text: var(--color-lightest);
+
+  width: clamp(4rem, 1.57rem + 5.063vw, 6rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border-radius: var(--button-radius);
+  backdrop-filter: blur(10px) saturate(200%);
+  background-color: oklch(from var(--button-color-surface-light) l c h / 0.3);
+  border: var(--button-border);
+  color: var(--button-color-text);
+
+  img {
+    transform: rotate(0);
+    transition: var(--transition-default);
+  }
+  &:focus-visible,
+  &:hover {
+    --button-border-color: var(--color-text);
+
+    img {
+      transform: rotate(-360deg);
+      transform-origin: center;
+    }
   }
 }
