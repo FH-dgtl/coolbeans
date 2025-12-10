@@ -1,6 +1,6 @@
 .list-alternate {
   --border-radius: 3rem;
-  --text-min-width: 280px;
+  --text-min-width: 270px;
   --image-max-width: 280px;
   display: grid;
   gap: var(--spacing-default);

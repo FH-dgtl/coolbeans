@@ -64,11 +64,12 @@
     --button-text: var(--button-text-hover);
     --button-surface: var(--button-surface-hover);
     --button-border-color: transparent;
-
-    animation: border-ani var(--button-animation-duration) infinite linear;
     background: linear-gradient(var(--button-surface-hover) 0 0) padding-box,
       conic-gradient(from var(--button-gradient-deg) in oklch, var(--rainbow))
         border-box;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: border-ani var(--button-animation-duration) infinite linear;
+    }
   }
 
   &::before,

@@ -34,11 +34,9 @@
 }
 
 html {
-  scroll-behavior: smooth;
-
-  @media (prefers-reduced-motion: reduce) {
+  @media (prefers-reduced-motion: no-preference) {
     & {
-      scroll-behavior: auto;
+      scroll-behavior: smooth;
     }
   }
 }
