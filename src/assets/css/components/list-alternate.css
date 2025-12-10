@@ -21,6 +21,7 @@
     img {
       flex: 1;
       max-width: 280px;
+      display: none;
     }
 
     h3 {
@@ -40,6 +41,12 @@
 
     article > *:first-child {
       margin-block-start: 0;
+    }
+
+    @container (width > 580px) {
+      & img {
+        display: block;
+      }
     }
 
     @container (width > 760px) {
