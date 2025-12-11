@@ -107,30 +107,19 @@
   background-color: oklch(from var(--button-color-surface-light) l c h / 0.3);
   border: var(--button-border);
   color: var(--button-color-text);
-
-  @media (prefers-reduced-motion: no-preference) {
-    & {
-      rotate: 0deg;
-      animation: rotate linear;
-    }
-  }
-
+  transform: rotate(0deg);
+  animation: rotate linear forwards;
   animation-timeline: scroll();
+
   &:focus-visible,
   &:hover {
     --button-border-color: var(--color-text);
-
-    @media (prefers-reduced-motion: no-preference) {
-      img {
-        animation: jump 0.2s ease-in;
-      }
-    }
   }
 }
 
 @keyframes rotate {
   to {
-    rotate: 180deg;
+    transform: rotate(180deg);
   }
 }
 
