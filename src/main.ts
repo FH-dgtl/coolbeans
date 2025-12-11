@@ -48,6 +48,8 @@ function handleOutsideClick(event: MouseEvent): void {
 const backToTopButton: HTMLElement | null = document.querySelector("[data-back-to-top]");
 backToTopButton?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    const noHashURL = window.location.href.replace(/#.*$/, '');
+    window.history.replaceState('', document.title, noHashURL) 
 });
 
 const allScroller: NodeListOf<HTMLElement> | null = document.querySelectorAll("[data-scroller]");
