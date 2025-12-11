@@ -60,3 +60,35 @@
 .spacer {
   margin-block-start: var(--spacing-default);
 }
+
+.timeline-slide-in-right {
+  animation: slide-in-right linear;
+  animation-timeline: view();
+  animation-range-end: 50vh;
+  animation-range-start: cover;
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.timeline-slide-in-left {
+  animation: slide-in-left linear;
+  animation-timeline: view();
+  animation-range-end: 50vh;
+  animation-range-start: cover;
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

@@ -76,6 +76,7 @@ main {
   padding-block: calc(4 * var(--spacing-default));
   background-color: var(--section-surface);
   justify-content: center;
+  overflow: clip;
 }
 
 .section-title {
