@@ -108,9 +108,10 @@
   border: var(--button-border);
   color: var(--button-color-text);
   transform: rotate(0deg);
-  animation: rotate linear forwards;
-  animation-timeline: scroll();
-
+  @media (prefers-reduced-motion: no-preference) {
+    animation: rotate linear forwards;
+    animation-timeline: scroll();
+  }
   &:focus-visible,
   &:hover {
     --button-border-color: var(--color-text);

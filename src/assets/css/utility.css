@@ -16,12 +16,7 @@
 }
 
 .img-wrap--cover {
-  z-index: -1;
-  position: relative;
-
   img {
-    position: absolute;
-    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -62,10 +57,12 @@
 }
 
 .timeline-slide-in-right {
-  animation: slide-in-right linear;
-  animation-timeline: view();
-  animation-range-end: 50vh;
-  animation-range-start: cover;
+  @media (prefers-reduced-motion: no-preference) {
+    animation: slide-in-right linear;
+    animation-timeline: view();
+    animation-range-end: 10rem;
+    animation-range-start: cover;
+  }
 }
 
 @keyframes slide-in-right {
@@ -78,10 +75,12 @@
 }
 
 .timeline-slide-in-left {
-  animation: slide-in-left linear;
-  animation-timeline: view();
-  animation-range-end: 50vh;
-  animation-range-start: cover;
+  @media (prefers-reduced-motion: no-preference) {
+    animation: slide-in-left linear;
+    animation-timeline: view();
+    animation-range-end: 10rem;
+    animation-range-start: cover;
+  }
 }
 
 @keyframes slide-in-left {

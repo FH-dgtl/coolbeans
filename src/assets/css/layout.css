@@ -121,7 +121,7 @@ main {
 
 .section--yoga {
   --section-surface: var(--color-aubergine);
-  padding-block-start: 0;
+  padding-block-start: var(--spacing-default);
   background-image: linear-gradient(
     var(--section-surface),
     var(--color-mangostan)

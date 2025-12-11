@@ -2,8 +2,13 @@
   --direction: forwards;
   --duration: 25s;
   display: flex;
-  overflow-x: hidden;
   aspect-ratio: 16 / 9;
+  overflow-x: auto;
+
+  @media (prefers-reduced-motion: no-preference) {
+    overflow-x: hidden;
+  }
+
   @media (width > 787px) {
     aspect-ratio: 3/1;
   }
@@ -16,7 +21,10 @@
 .scroller__inner {
   width: max-content;
   display: flex;
-  animation: scroll var(--duration, 40s) var(--direction) linear infinite;
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: scroll var(--duration, 40s) var(--direction) linear infinite;
+  }
 }
 
 .scroller__item {
