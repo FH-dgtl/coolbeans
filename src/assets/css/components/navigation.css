@@ -109,8 +109,10 @@
   color: var(--button-color-text);
 
   @media (prefers-reduced-motion: no-preference) {
-    rotate: 0deg;
-    animation: rotate linear;
+    & {
+      rotate: 0deg;
+      animation: rotate linear;
+    }
   }
 
   animation-timeline: scroll();
@@ -131,6 +133,7 @@
     rotate: 180deg;
   }
 }
+
 @keyframes jump {
   to {
     transform: translateY(-0.25rem);
