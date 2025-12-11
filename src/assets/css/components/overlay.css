@@ -1,0 +1,46 @@
+dialog {
+  --dialog-spacing: var(--spacing-default);
+  max-width: 1024px;
+  width: 90vw;
+  padding: 0;
+  border: none;
+  scrollbar-width: thin;
+
+  button[data-overlay-close] {
+    padding: var(--dialog-spacing);
+    position: sticky;
+    width: max-content;
+    display: block;
+    margin-inline-start: auto;
+    top: 0;
+
+    &:focus-visible,
+    &:hover {
+      color: var(--color-peach);
+    }
+
+    svg {
+      width: var(--dialog-spacing);
+      height: var(--dialog-spacing);
+    }
+  }
+
+  article {
+    margin-inline-start: var(--dialog-spacing);
+    margin-inline-end: calc(var(--dialog-spacing) * 2);
+    margin-block-end: var(--dialog-spacing);
+  }
+}
+
+[data-overlay-button] {
+  margin: 0;
+  padding: 0;
+  &:focus-visible,
+  &:hover {
+    color: var(--color-peach);
+  }
+}
+
+::backdrop {
+  backdrop-filter: blur(40px);
+}

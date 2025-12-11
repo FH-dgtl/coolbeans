@@ -489,8 +489,7 @@
       <!-- Footer -->
       <footer id="footer">
         <nav>
-          <a href="datenschutz.html">Impressum</a>
-          <a href="datenschutz.html">Datenschutz</a>
+          <button data-overlay-button="privacy">Impressum & Datenschutz</button>
           <span>&copy; coolbeans - moodfood 2026</span>
         </nav>
       </footer>
@@ -508,7 +507,88 @@
         </button>
       </div>
     </main>
+    <dialog id="privacy" data-overlay closedby="any">
+      <button data-overlay-close autofocus title="Schliessen">
+        <svg aria-hidden="true">
+          <use href="/icons.svg#close" />
+        </svg>
+      </button>
+      <article>
+        <div class="grid">
+          <span>
+            <h2 class="heading-s">Impressum</h2>
+            <p>
+              <strong>Coolbeans Moodfood GbR</strong><br />
+              Heerdterbuschstraße 4<br />
+              41460 Neuss<br />
+            </p>
 
+            <p>
+              <a href="mailto:info@coolbeans-moodfood.de"
+                >info@coolbeans-moodfood.de</a
+              >
+            </p>
+          </span>
+          <img
+            class="img-ratio-4-3-contain"
+            src="https://res.cloudinary.com/coolbeans-moodfood/image/upload/f_auto/q_auto/c_scale,w_420/v1764859644/coolbeans.webp"
+            alt="Zwei coole Bohnen tanzen"
+          />
+        </div>
+        <h2 class="heading-s">1. Verantwortliche Stelle</h2>
+        <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
+        <p>
+          <strong>Coolbeans Moodfood GbR </strong><br />
+          Heerdterbuschstraße 4 <br />
+          41460 Neuss
+        </p>
+        <p>
+          <a href="mailto:info@coolbeans-moodfood.de"
+            >info@coolbeans-moodfood.de</a
+          >
+        </p>
+        <h2 class="heading-s">2. Allgemeines zur Datenerhebung</h2>
+        <p>
+          Beim Besuch dieser Website werden grundsätzlich keine
+          personenbezogenen Daten erhoben, verarbeitet oder gespeichert. Diese
+          Website dient ausschließlich der Bereitstellung von Informationen und
+          verwendet keine Cookies, keine Tracking-Tools (wie Google Analytics)
+          und keine Social-Media-Plugins.
+        </p>
+        <h2 class="heading-s">3. Server-Logfiles</h2>
+        <p>
+          Der Webserver erhebt automatisch Daten, die dein Browser übermittelt.
+          Diese sogenannten Server-Logfiles können enthalten:
+          <br />
+          Browsertyp und -version, verwendetes Betriebssystem, Referrer URL (die
+          zuvor besuchte Seite), Hostname des zugreifenden Rechners, Uhrzeit der
+          Serveranfrage, IP-Adresse <br />
+          Diese Daten sind nicht bestimmten Personen zuordenbar. Eine
+          Zusammenführung dieser Daten mit anderen Datenquellen wird nicht
+          vorgenommen. Die Speicherung erfolgt aus Sicherheitsgründen (z. B. zur
+          Aufklärung von Missbrauchs- oder Betrugshandlungen) und wird
+          regelmäßig gelöscht.
+        </p>
+        <h2 class="heading-s">4. Keine Weitergabe von Daten</h2>
+        <p>
+          Es findet keine Weitergabe personenbezogener Daten an Dritte statt.
+        </p>
+        <h2 class="heading-s">5. Rechte der betroffenen Personen</h2>
+        <p>
+          Da auf dieser Website keine personenbezogenen Daten erhoben oder
+          verarbeitet werden, bestehen im Regelfall keine Betroffenenrechte (z.
+          B. Auskunft, Berichtigung, Löschung). Solltest du dennoch Fragen zum
+          Datenschutz haben, kannst du dich jederzeit an die oben genannte
+          verantwortliche Stelle wenden.
+        </p>
+        <h2 class="heading-s">6. Änderungen dieser Datenschutzerklärung</h2>
+        <p>
+          Wir behalten uns vor, diese Datenschutzerklärung anzupassen, falls
+          sich die rechtlichen Grundlagen oder der Funktionsumfang dieser
+          Website ändern
+        </p>
+      </article>
+    </dialog>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

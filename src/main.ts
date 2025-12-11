@@ -55,3 +55,14 @@ allScroller.forEach(element => {
     if(!element.dataset.url) return
     renderGalleryImages(element, element.dataset.url, 500);
 });
+
+const allOverlays = document.querySelectorAll<HTMLElement>("[data-overlay-button]");
+allOverlays.forEach(element => {
+    const targetId = element.dataset.overlayButton;
+    if (!targetId) return;
+    const target = document.getElementById(targetId) as HTMLDialogElement | null;
+    if (!target) return;
+    element.addEventListener("click", () => target.showModal());
+    const closeBtn = target.querySelector<HTMLElement>("[data-overlay-close]");
+    closeBtn?.addEventListener("click", () => target.close());
+});
