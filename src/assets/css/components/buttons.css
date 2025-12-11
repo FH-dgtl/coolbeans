@@ -33,6 +33,10 @@
   --button-fs: var(--fs-responsive-s);
   --rainbow: var(--color-peach), var(--color-brand), var(--color-brand-1),
     var(--color-sky), var(--color-mandarine), var(--color-peach);
+  --rainbow-gradient: linear-gradient(var(--button-surface-hover) 0 0)
+      padding-box,
+    conic-gradient(from var(--button-gradient-deg) in oklch, var(--rainbow))
+      border-box;
   --button-gradient-deg: -90deg;
   --button-shadow-blur: 1rem;
   --button-shadow-opacity: 10%;
@@ -64,9 +68,18 @@
     --button-text: var(--button-text-hover);
     --button-surface: var(--button-surface-hover);
     --button-border-color: transparent;
-    background: linear-gradient(var(--button-surface-hover) 0 0) padding-box,
-      conic-gradient(from var(--button-gradient-deg) in oklch, var(--rainbow))
-        border-box;
+    background: var(--rainbow-gradient);
+    @media (prefers-reduced-motion: no-preference) {
+      animation: border-ani var(--button-animation-duration) infinite linear;
+    }
+  }
+
+  @media (hover: none) {
+    --button-shadow-opacity: 10%;
+    --button-text: var(--button-text-hover);
+    --button-surface: var(--button-surface-hover);
+    --button-border-color: transparent;
+    background: var(--rainbow-gradient);
     @media (prefers-reduced-motion: no-preference) {
       animation: border-ani var(--button-animation-duration) infinite linear;
     }
